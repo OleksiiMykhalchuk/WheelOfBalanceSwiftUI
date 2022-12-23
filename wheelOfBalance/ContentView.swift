@@ -24,8 +24,10 @@ struct ContentView: View {
                     health: 4,
                     growth: 3,
                     finance: 2)
+                LabelsView()
             }
             .navigationTitle("Wheel of Balance")
+            .background(.mint)
         }
     }
 }
