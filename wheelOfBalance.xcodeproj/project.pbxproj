@@ -13,6 +13,8 @@
 		88C6EB292955F28500A28014 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88C6EB282955F28500A28014 /* Preview Assets.xcassets */; };
 		88C6EB302955F2EB00A28014 /* CircleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6EB2F2955F2EB00A28014 /* CircleShape.swift */; };
 		88C6EB322955F6B900A28014 /* DrawShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6EB312955F6B900A28014 /* DrawShapes.swift */; };
+		88C6EB342955FE4C00A28014 /* DrawLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6EB332955FE4C00A28014 /* DrawLines.swift */; };
+		88C6EB3629560AFD00A28014 /* DrawWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C6EB3529560AFD00A28014 /* DrawWheel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		88C6EB282955F28500A28014 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		88C6EB2F2955F2EB00A28014 /* CircleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleShape.swift; sourceTree = "<group>"; };
 		88C6EB312955F6B900A28014 /* DrawShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawShapes.swift; sourceTree = "<group>"; };
+		88C6EB332955FE4C00A28014 /* DrawLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawLines.swift; sourceTree = "<group>"; };
+		88C6EB3529560AFD00A28014 /* DrawWheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawWheel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			isa = PBXGroup;
 			children = (
 				88C6EB212955F28300A28014 /* wheelOfBalanceApp.swift */,
+				88C6EB332955FE4C00A28014 /* DrawLines.swift */,
+				88C6EB3529560AFD00A28014 /* DrawWheel.swift */,
 				88C6EB312955F6B900A28014 /* DrawShapes.swift */,
 				88C6EB232955F28300A28014 /* ContentView.swift */,
 				88C6EB252955F28500A28014 /* Assets.xcassets */,
@@ -143,7 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88C6EB342955FE4C00A28014 /* DrawLines.swift in Sources */,
 				88C6EB302955F2EB00A28014 /* CircleShape.swift in Sources */,
+				88C6EB3629560AFD00A28014 /* DrawWheel.swift in Sources */,
 				88C6EB322955F6B900A28014 /* DrawShapes.swift in Sources */,
 				88C6EB242955F28300A28014 /* ContentView.swift in Sources */,
 				88C6EB222955F28300A28014 /* wheelOfBalanceApp.swift in Sources */,

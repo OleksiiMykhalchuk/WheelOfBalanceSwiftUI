@@ -10,9 +10,13 @@ import SwiftUI
 struct CircleShape: View {
     var width: CGFloat
     var body: some View {
-        Circle()
-            .stroke(lineWidth: 1)
-            .frame(width: width)
+        ZStack {
+            ForEach(0..<10) { number in
+                Circle()
+                    .stroke(lineWidth: 1)
+                    .frame(width: width - CGFloat(number)*width/10)
+            }
+        }
     }
 }
 
