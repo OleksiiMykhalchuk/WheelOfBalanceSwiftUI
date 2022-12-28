@@ -8,6 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @State var itemsPicker: String = ""
+    @State var number: String = ""
+    let items: [String] = ["Career: ", "Spiritual: ", "Environment: ", "Social: ", "Family: ", "Health: ", "Growth: ", "Finance: "]
+
+    @State var dictionary: [String: String] = ["Career: ": "0", "Spiritual: ": "0", "Environment: ": "0", "Social: ": "0", "Family: ": "0", "Health: ": "0", "Growth: ": "0", "Finance: ": "0"]
+
+    @State var percentage: CGFloat = 0
+    @State var isChangedCategory: Bool = false
+    @State var isChangedValue: Bool = false
+    @State var isNumberChanged: Bool = false
+    
     var body: some View {
         NavigationStack {
 
@@ -38,20 +50,13 @@ struct ContentView: View {
                 family: CGFloat((dictionary[items[4]]! as NSString).floatValue),
                 health: CGFloat((dictionary[items[5]]! as NSString).floatValue),
                 growth: CGFloat((dictionary[items[6]]! as NSString).floatValue),
-                finance: CGFloat((dictionary[items[7]]! as NSString).floatValue))
+                finance: CGFloat((dictionary[items[7]]! as NSString).floatValue),
+                isChangedCategory: $isChangedCategory,
+                isChangedValue: $isChangedValue)
             LabelsView()
         }
     }
-    @State var input: [CGFloat] = Array(repeating: 0, count: 8)
-    @State var results: [String] = Array(repeating: "0", count: 8)
-    @State var itemsPicker: String = ""
-    @State var number: String = "" {
-        didSet {
-            print(number)
-        }
-    }
-    let items: [String] = ["Career: ", "Spiritual: ", "Environment: ", "Social: ", "Family: ", "Health: ", "Growth: ", "Finance: "]
-    @State var dictionary: [String: String] = ["Career: ": "0", "Spiritual: ": "0", "Environment: ": "0", "Social: ": "0", "Family: ": "0", "Health: ": "0", "Growth: ": "0", "Finance: ": "0"]
+
     var entryView: some View {
         VStack {
             VStack {
@@ -64,6 +69,7 @@ struct ContentView: View {
                 .onChange(of: itemsPicker) { newValue in
                     number = dictionary[newValue] ?? "0"
                 }
+                .tint(.black)
 
                 Picker("Result", selection: $number) {
                     ForEach(0..<11, id: \.self) {
@@ -74,6 +80,7 @@ struct ContentView: View {
                 .tint(.black)
                 .onChange(of: number) { newValue in
                     dictionary[itemsPicker] = newValue
+                    isChangedValue.toggle()
                 }
 
             }
@@ -81,8 +88,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}

@@ -20,7 +20,7 @@ struct DrawShapes: View {
                         startAngle: Angle(degrees: 0.0),
                         endAngle: Angle(degrees: 315), clockwise: true)
                 }
-                .fill(.green)
+                .fill(.gray)
                 Path() { path in
                     path.move(to: CGPoint(x: geometry.size.width/2, y: geometry.size.height/2))
                     path.addArc(
